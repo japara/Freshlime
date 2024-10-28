@@ -6,6 +6,7 @@ import Inside from "./components/Inside";
 import Wework from "./components/Wework";
 import Pricing from "./components/Pricing";
 import Email from "./components/Email";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Wework />
       <Pricing />
       <Email />
+      <Footer />
     </div>
   );
 }
