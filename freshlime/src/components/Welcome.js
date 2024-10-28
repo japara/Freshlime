@@ -9,7 +9,7 @@ import gym from "../images/gym.jpg";
 
 function Welcome() {
   return (
-    <div className="flex flex-cols gap-8 justify-center bg-[#e6f2ef] py-[80px]">
+    <div className="flex flex-cols gap-8  justify-center bg-[#e6f2ef] py-[150px] z-999">
       <div className=" flex flex-col basis-4/12 items-center mr-[50px]">
         <h2 className="text-[50px] text-justify font-[900] leading-none mt-[40px]">
           Welcome to the <br />

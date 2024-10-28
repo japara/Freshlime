@@ -3,8 +3,8 @@ import logo from "../images/logo.png";
 
 function Header() {
   return (
-    <div className="flex justify-center px-[4.8rem] bg-[#e6f2ef]">
-      <nav className="flex justify-between items-center w-[100%] h-[96px] ">
+    <div className="flex justify-center  bg-[#e6f2ef]">
+      <nav className="flex justify-between px-[4.8rem] bg-[#e6f2ef] items-center w-[100%] h-[96px] fixed">
         <img src={logo} alt="logo" width={118}></img>
         <ul className="list-none flex items-center gap-[2.8rem] text-[18px] font-[500] ">
           <li className="cursor-pointer">How it works</li>

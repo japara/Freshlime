@@ -5,6 +5,7 @@ import How from "./components/How";
 import Inside from "./components/Inside";
 import Wework from "./components/Wework";
 import Pricing from "./components/Pricing";
+import Email from "./components/Email";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Inside />
       <Wework />
       <Pricing />
+      <Email />
     </div>
   );
 }

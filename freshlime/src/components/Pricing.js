@@ -50,7 +50,7 @@ function Pricing() {
             </div>
           </div>
         </div>
-        <div className="flex relative overflow-hidden gap-[80px] px-[13rem] h-fit py-[3rem] justify-center items-center mx-[80px] mb-[3rem] bg-[#e6f2ef] rounded-[11px] ">
+        <div className="flex relative overflow-hidden  gap-[80px] px-[13rem] h-fit py-[3rem] justify-center items-center mx-[80px] mb-[3rem] bg-[#e6f2ef] rounded-[11px] ">
           <div className="flex-1 flex flex-col items-center px-20">
             <div className="text-center">
               <p className="font-[600] text-[#077252] text-[1.6rem]">Monthly</p>
