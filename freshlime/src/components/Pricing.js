@@ -9,135 +9,134 @@ import {
 
 function Pricing() {
   return (
-    <div className="px-48 ">
-      <p className="text-[#077252] font-[600] text-left text-[1.6rem] uppercase mt-[10rem]">
+    <div className="px-6 lg:px-48">
+      <p className="text-[#077252] font-semibold text-left text-lg lg:text-2xl uppercase mt-40">
         pricing
       </p>
-      <p className=" font-[700] text-[3rem] text-left mb-[3rem]">
+      <p className="font-bold text-2xl lg:text-4xl text-left mb-8">
         Get your dream body
       </p>
-      <div className="flex justify-center">
-        <div className="flex gap-[80px] h-fit py-[3rem] justify-center items-center mx-[80px] mb-[6rem] bg-white border-[2px] border-[#e6f2ef] rounded-[11px] ">
-          <div className="flex-1 flex flex-col items-center px-20">
-            <div className="text-center">
-              <p className="font-[600] text-[#077252] text-[1.6rem]">Monthly</p>
-              <p className="font-[900]  text-[1.6rem] mt-[0.8rem]">
-                $ <span className="text-[3.6rem]">45</span>
-              </p>
-              <p className="font-[600] text-[#777] text-[1.2rem] mt-[0.8rem]">
-                Pay every single month
-              </p>
-              <ul className="text-[18px] w-[15rem] ">
-                <li className="flex justify-left items-center gap-3 mt-[2rem]">
-                  <IoSpeedometerOutline className="text-[#40c057] h-[24px] w-[24px]" />
-                  High quality stuff
-                </li>
-                <li className="flex justify-left items-center gap-3 mt-[1rem]">
-                  <IoSpeedometerOutline className="text-[#40c057] h-[24px] w-[24px]" />{" "}
-                  Open 24/7
-                </li>
-                <li className="flex justify-left items-center gap-3 mt-[1rem]">
-                  <IoSpeedometerOutline className="text-[#40c057] h-[24px] w-[24px]" />{" "}
-                  Every 10th protein free
-                </li>
-                <li className="flex justify-left items-center gap-3 mt-[1rem]">
-                  <IoCloseOutline className="text-[#40c057] h-[26px] w-[26px]" />{" "}
-                </li>
-              </ul>
-              <button className="text-white bg-[#087f5b] rounded-[9px] px-6 py-3 mt-8">
-                Get your month pass
-              </button>
-            </div>
+
+      <div className="flex flex-col md:flex-row justify-center gap-8 items-center">
+        {/* Monthly Card */}
+        <div className="flex flex-col items-center h-fit py-6 px-4 sm:px-8 lg:px-12 bg-white border-2 border-[#e6f2ef] rounded-lg w-fit  md:w-fit lg:w-fit">
+          <div className="text-center">
+            <p className="font-semibold text-[#077252] text-lg lg:text-2xl">
+              Monthly
+            </p>
+            <p className="font-extrabold text-xl lg:text-3xl mt-2">
+              $ <span className="text-4xl lg:text-5xl">45</span>
+            </p>
+            <p className="font-semibold text-[#777] text-sm lg:text-lg mt-2">
+              Pay every single month
+            </p>
+            <ul className="text-base lg:text-lg w-64 mx-auto mt-4 space-y-3">
+              <li className="flex items-center gap-3">
+                <IoSpeedometerOutline className="text-[#40c057] h-6 w-6" />
+                High quality stuff
+              </li>
+              <li className="flex items-center gap-3">
+                <IoSpeedometerOutline className="text-[#40c057] h-6 w-6" />
+                Open 24/7
+              </li>
+              <li className="flex items-center gap-3">
+                <IoSpeedometerOutline className="text-[#40c057] h-6 w-6" />
+                Every 10th protein free
+              </li>
+              <li className="flex items-center gap-3">
+                <IoCloseOutline className="text-[#40c057] h-6 w-6" />
+                Cancel anytime
+              </li>
+            </ul>
+            <button className="text-white bg-[#087f5b] rounded-md px-6 py-3 mt-6">
+              Get your month pass
+            </button>
           </div>
         </div>
-        <div className="flex relative overflow-hidden  gap-[80px] px-[13rem] h-fit py-[3rem] justify-center items-center mx-[80px] mb-[3rem] bg-[#e6f2ef] rounded-[11px] ">
-          <div className="flex-1 flex flex-col items-center px-20">
-            <div className="text-center">
-              <p className="font-[600] text-[#077252] text-[1.6rem]">Monthly</p>
-              <p className="font-[900]  text-[1.6rem] mt-[0.8rem]">
-                $ <span className="text-[3.6rem]">600</span>
+
+        {/* Yearly Card */}
+        <div className="flex flex-col overflow-hidden items-center h-fit py-6 px-4 sm:px-8 lg:px-12 bg-[#e6f2ef] rounded-lg w-fit md:w-fit lg:w-fit relative">
+          <div className="text-center">
+            <p className="font-semibold text-[#077252] text-lg lg:text-2xl">
+              Yearly
+            </p>
+            <p className="font-extrabold text-xl lg:text-3xl mt-2">
+              $ <span className="text-4xl lg:text-5xl">600</span>
+            </p>
+            <p className="font-semibold text-[#777] text-sm lg:text-lg mt-2">
+              Per month it's just $30
+            </p>
+            <ul className="text-base lg:text-lg w-64 mx-auto mt-4 space-y-3">
+              <li className="flex items-center gap-3">
+                <IoSpeedometerOutline className="text-[#40c057] h-6 w-6" />
+                Free sauna
+              </li>
+              <li className="flex items-center gap-3">
+                <IoSpeedometerOutline className="text-[#40c057] h-6 w-6" />
+                Free chocolate bars
+              </li>
+              <li className="flex items-center gap-3">
+                <IoSpeedometerOutline className="text-[#40c057] h-6 w-6" />
+                Champ with you
+              </li>
+              <li className="flex items-center gap-3">
+                <IoSpeedometerOutline className="text-[#40c057] h-6 w-6" />
+                Plan of the year
+              </li>
+            </ul>
+            <button className="text-white bg-[#087f5b] rounded-md px-6 py-3 mt-6">
+              Get your year pass
+            </button>
+            <div className="absolute top-10 -right-10 rotate-45">
+              <p className="bg-[#94d82d] text-center text-[#333] text-xs font-bold px-16 py-1">
+                BEST VALUE
               </p>
-              <p className="font-[600] text-[#777] text-[1.2rem] mt-[0.8rem]">
-                Per month it's just 30$
-              </p>
-              <ul className="text-[18px] w-[15rem] ">
-                <li className="flex justify-left items-center gap-3 mt-[2rem]">
-                  <IoSpeedometerOutline className="text-[#40c057] h-[24px] w-[24px]" />
-                  Free sauna
-                </li>
-                <li className="flex justify-left items-center gap-3 mt-[1rem]">
-                  <IoSpeedometerOutline className="text-[#40c057] h-[24px] w-[24px]" />{" "}
-                  Free chocolate bars
-                </li>
-                <li className="flex justify-left items-center gap-3 mt-[1rem]">
-                  <IoSpeedometerOutline className="text-[#40c057] h-[24px] w-[24px]" />{" "}
-                  Chapm with you
-                </li>
-                <li className="flex justify-left items-center gap-3 mt-[1rem]">
-                  <IoSpeedometerOutline className="text-[#40c057] h-[26px] w-[26px]" />{" "}
-                  Plan of the year
-                </li>
-              </ul>
-              <button className="text-white bg-[#087f5b] rounded-[9px] px-6 py-3 mt-8">
-                Get your month pass
-              </button>
-              <div className="absolute top-8 -right-14 rotate-45">
-                <p className="bg-[#94d82d] text-center text-[#333] text-[12.8px] font-bold px-[64px] py-[6xp]">
-                  BEST VALUE
-                </p>
-              </div>
             </div>
           </div>
         </div>
       </div>
-      <p className="mb-[5rem]">
+
+      <p className="text-center mt-12 text-base lg:text-lg mb-12">
         Prices include all applicable taxes. You can cancel at any time. Both
         plans include the following:
       </p>
-      <div className="flex justify-center gap-10 mt-[1rem] px-6">
-        <div className="text-left flex-1">
-          <div className="rounded-full bg-[#b5d9ce] w-fit p-4">
-            {" "}
-            <IoPulseOutline className="text-[#087f5b] h-[26px] w-[26px] " />
+
+      {/* Benefit Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:grid-cols-4 px-4">
+        <div className="flex flex-col items-center text-center space-y-4">
+          <div className="rounded-full bg-[#b5d9ce] p-4">
+            <IoPulseOutline className="text-[#087f5b] h-8 w-8" />
           </div>
-          <p className="font-[800] text-[22px] mt-[1.8rem]">
-            Tranin every day!
-          </p>
-          <p className="mt-[1rem] leading-7">
-            Our gym is open 365 days in year, even holidays you can come!
+          <p className="font-bold text-lg">Train every day!</p>
+          <p className="text-sm leading-relaxed">
+            Our gym is open 365 days a year, even holidays.
           </p>
         </div>
-        <div className="text-left flex-1">
-          <div className="rounded-full bg-[#b5d9ce] w-fit p-4">
-            {" "}
-            <IoRocketOutline className="text-[#087f5b] h-[26px] w-[26px] " />
+        <div className="flex flex-col items-center text-center space-y-4">
+          <div className="rounded-full bg-[#b5d9ce] p-4">
+            <IoRocketOutline className="text-[#087f5b] h-8 w-8" />
           </div>
-          <p className="font-[800] text-[22px] mt-[1.8rem]">
-            Natural and organic
-          </p>
-          <p className="mt-[1rem] leading-7">
-            Our proteins are best in the world and organic good for health
+          <p className="font-bold text-lg">Natural and organic</p>
+          <p className="text-sm leading-relaxed">
+            Our proteins are organic and top quality for health.
           </p>
         </div>
-        <div className="text-left flex-1">
-          <div className="rounded-full bg-[#b5d9ce] w-fit p-4">
-            {" "}
-            <IoRocketOutline className="text-[#087f5b] h-[26px] w-[26px] " />
+        <div className="flex flex-col items-center text-center space-y-4">
+          <div className="rounded-full bg-[#b5d9ce] p-4">
+            <IoRocketOutline className="text-[#087f5b] h-8 w-8" />
           </div>
-          <p className="font-[800] text-[22px] mt-[1.8rem]">Motivation</p>
-          <p className="mt-[1rem] leading-7">
-            We have motivation speakers to motivate you every day
+          <p className="font-bold text-lg">Motivation</p>
+          <p className="text-sm leading-relaxed">
+            We have motivational speakers every day.
           </p>
         </div>
-        <div className="text-left flex-1">
-          <div className="rounded-full bg-[#b5d9ce] w-fit p-4">
-            {" "}
-            <IoPause className="text-[#087f5b] h-[26px] w-[26px] " />
+        <div className="flex flex-col items-center text-center space-y-4">
+          <div className="rounded-full bg-[#b5d9ce] p-4">
+            <IoPause className="text-[#087f5b] h-8 w-8" />
           </div>
-          <p className="font-[800] text-[22px] mt-[1.8rem]">Pause anytime</p>
-          <p className="mt-[1rem] leading-7">
-            You got full year and have vacation? pause it, it is possible with
-            us
+          <p className="font-bold text-lg">Pause anytime</p>
+          <p className="text-sm leading-relaxed">
+            Enjoy your membership pause feature anytime.
           </p>
         </div>
       </div>

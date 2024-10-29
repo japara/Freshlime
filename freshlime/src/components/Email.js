@@ -12,7 +12,6 @@ export const Email = () => {
   const [isFormValid, setIsFormValid] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
-  // Function to handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -22,7 +21,6 @@ export const Email = () => {
     validateForm({ ...formData, [name]: value });
   };
 
-  // Function to validate form
   const validateForm = (data) => {
     const { user_name, user_email, user_hear } = data;
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -32,7 +30,6 @@ export const Email = () => {
       user_hear.trim() !== "";
     setIsFormValid(isValid);
 
-    // Set error message if any field is missing
     if (!isValid) {
       setErrorMessage("Please fill out all fields.");
     } else {
@@ -44,23 +41,23 @@ export const Email = () => {
     e.preventDefault();
 
     if (!isFormValid) {
-      return; // Prevent submission if form is invalid
+      return;
     }
 
     emailjs
       .sendForm(
-        "service_7s2hlon", // Service ID
-        "template_hfgq3up", // Template ID
+        "service_7s2hlon",
+        "template_hfgq3up",
         form.current,
-        "wFzPi2R76_p2XCZ28" // Public Key (User ID)
+        "wFzPi2R76_p2XCZ28"
       )
       .then(
         () => {
           console.log("SUCCESS!");
           alert("Email sent successfully!");
-          e.target.reset(); // Reset form after successful submission
-          setFormData({ user_name: "", user_email: "", user_hear: "" }); // Reset state
-          setIsFormValid(false); // Reset form validation state
+          e.target.reset();
+          setFormData({ user_name: "", user_email: "", user_hear: "" });
+          setIsFormValid(false);
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -70,12 +67,12 @@ export const Email = () => {
   };
 
   return (
-    <div className="flex justify-center bg-gradient-to-r from-[#52a58c] to-[#087f5b] mx-40 mt-[10rem] rounded-xl">
-      <div className="text-left p-12 flex-2">
-        <p className="font-[700] text-[3.5rem] leading-[3.2rem]">
+    <div className="flex flex-col lg:flex-row justify-center items-center bg-gradient-to-r from-[#52a58c] to-[#087f5b] mx-6 lg:mx-20 my-10 lg:my-20 rounded-xl overflow-hidden">
+      <div className="flex-1 p-8 sm:p-12 w-full">
+        <p className="font-bold text-3xl sm:text-4xl leading-tight text-white">
           Get your first week for free
         </p>
-        <p className="text-[18px] my-[2rem]">
+        <p className="text-lg sm:text-xl text-white mt-4">
           A lot and all kinds of hummers waiting for you. Start working out
           today, make your best shape as possible, stay healthy and active with
           us!
@@ -83,45 +80,43 @@ export const Email = () => {
         <form
           ref={form}
           onSubmit={sendEmail}
-          className="flex flex-col justify-center items-center gap-4 flex-2 px-2"
+          className="flex flex-col gap-4 mt-6"
         >
-          <div className="flex text-left gap-6 w-full">
-            <div className="flex flex-col w-[50%]">
-              <label>Name</label>
+          <div className="flex flex-col sm:flex-row sm:gap-6 w-full">
+            <div className="flex flex-col w-full">
+              <label className="text-left">Name</label>
               <input
                 type="text"
                 name="user_name"
                 value={formData.user_name}
                 onChange={handleChange}
-                className="bg-[#b5d9ce] rounded-[9px] p-2 my-2"
+                className="bg-[#b5d9ce] rounded-lg p-2"
                 required
               />
             </div>
-            <div className="flex flex-col flex-1 w-[50%]">
-              <label>Email</label>
+            <div className="flex flex-col w-full mt-4 sm:mt-0">
+              <label className="text-left">Email</label>
               <input
                 type="email"
                 name="user_email"
                 value={formData.user_email}
                 onChange={handleChange}
-                className="bg-[#b5d9ce] rounded-[9px] p-2 my-2"
+                className="bg-[#b5d9ce] rounded-lg p-2"
                 required
               />
             </div>
           </div>
-          <div className="flex flex-1 justify-center items-center gap-6 w-full">
-            <div className="my-2 flex flex-1 flex-col gap-2 w-full">
-              <label className="text-[8px] font-[700]">
-                Where did you hear from us?
-              </label>
+          <div className="flex flex-col items-center sm:flex-row items-center sm:gap-6 w-full mt-4">
+            <div className="flex flex-col text-left w-1/2">
+              <label className="">Where did you hear from us?</label>
               <select
                 name="user_hear"
                 value={formData.user_hear}
                 onChange={handleChange}
-                className="pl-2 pr-6 bg-[#b5d9ce]"
+                className="bg-[#b5d9ce] mt-2 p-1"
                 required
               >
-                <option value="">Please Choose one option:</option>
+                <option value="">Please choose one option:</option>
                 <option value="family">Friends and Family</option>
                 <option value="youtube">Youtube video</option>
                 <option value="podcast">Podcast</option>
@@ -129,23 +124,27 @@ export const Email = () => {
                 <option value="other">Other</option>
               </select>
             </div>
-            <div className="w-full flex-1">
-              <button
-                type="submit"
-                disabled={!isFormValid}
-                className="bg-[#02261b] px-16 py-2 text-white rounded-[8px] text-[18px] w-full"
-              >
-                Sign up now
-              </button>
-            </div>
+            <button
+              type="submit"
+              disabled={!isFormValid}
+              className="bg-[#02261b] px-6 py-3 text-white text-[1.2rem] flex-1  rounded-lg sm:w-auto mt-4 sm:mt-0"
+            >
+              Sign up now
+            </button>
           </div>
-          {/* Display error message */}
           {errorMessage && (
-            <p className="text-red-600 text-center mt-4">{errorMessage}</p>
+            <p className="text-red-500 text-center mt-4">{errorMessage}</p>
           )}
         </form>
       </div>
-      <img src={gym} alt="gym" className="w-1/3 rounded-r-xl flex-1"></img>
+
+      <div className="flex-1 w-full">
+        <img
+          src={gym}
+          alt="gym"
+          className="w-full h-full object-cover rounded-b-xl lg:rounded-r-xl"
+        />
+      </div>
     </div>
   );
 };

@@ -8,52 +8,63 @@ import {
 
 function Footer() {
   return (
-    <div className="flex gap-4 py-[4rem] mt-[6rem] pl-32 border-t-[1px] text-[#767676]">
-      <div className="flex-1 text-left">
-        <img src={logo} alt="logo" className="w-[5rem] mb-4"></img>
-        <div className="flex gap-2 mb-6">
-          <IoLogoInstagram className="w-[22px] h-[22px]" />
-          <IoLogoFacebook className="w-[22px] h-[22px]" />
-          <IoLogoTwitter className="w-[22px] h-[22px] " />
+    <div className="py-16 px-8 border-t text-[#767676] lg:flex lg:gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:flex lg:flex-row w-full">
+        {/* Logo and Social Icons */}
+        <div className="text-left sm:col-span-2 lg:flex-1 lg:pl-32">
+          <img src={logo} alt="logo" className="w-20 mb-4" />
+          <div className="flex gap-2 mb-6">
+            <IoLogoInstagram className="w-6 h-6" />
+            <IoLogoFacebook className="w-6 h-6" />
+            <IoLogoTwitter className="w-6 h-6" />
+          </div>
+          <p className="text-[#087f5b] text-sm">
+            Copyright © created in 2024 by Davit Japaridze
+          </p>
         </div>
-        <p className="text-[#087f5b]">
-          Copyright © created in 2024 by Davit Japaridze
-        </p>
-      </div>
-      <div className="flex-1 text-left">
-        <ul>
-          <lh className="text-black font-[700] text-[20px]">Contact us</lh>
-          <li className="my-4">Tbilisi Georgia, Vera</li>
-          <li className="my-4">+995555306126</li>
-          <li>rkaranadze.newvision.ge</li>
-        </ul>
-      </div>
-      <div className="flex-1 text-left">
-        <ul>
-          <lh className="text-black font-[700] text-[20px]">Account</lh>
-          <li className="my-4">Create account</li>
-          <li className="my-4">Sign in </li>
-          <li className="my-4">IOS app </li>
-          <li className="my-4">Android app</li>
-        </ul>
-      </div>
-      <div className="flex-1 text-left">
-        <ul>
-          <lh className="text-black font-[700] text-[20px]">Company</lh>
-          <li className="my-4">About FreshLime</li>
-          <li className="my-4">For Business </li>
-          <li className="my-4">Partners </li>
-          <li className="my-4">Careers</li>
-        </ul>
-      </div>
-      <div className="flex-1 text-left">
-        <ul>
-          <lh className="text-black font-[700] text-[20px]">Resourses</lh>
-          <li className="my-4">Working plan</li>
-          <li className="my-4">Help center</li>
-          <li className="my-4">Privacy & Terms</li>
-          <li className="my-4">My other works</li>
-        </ul>
+
+        {/* Contact Us Section */}
+        <div className="text-left lg:flex-1">
+          <ul>
+            <lh className="text-black font-bold text-lg">Contact us</lh>
+            <li className="my-4 text-sm">Tbilisi, Georgia, Vera</li>
+            <li className="my-4 text-sm">+995555306126</li>
+            <li className="text-sm">rkaranadze.newvision.ge</li>
+          </ul>
+        </div>
+
+        {/* Account Section */}
+        <div className="text-left lg:flex-1">
+          <ul>
+            <lh className="text-black font-bold text-lg">Account</lh>
+            <li className="my-4 text-sm">Create account</li>
+            <li className="my-4 text-sm">Sign in</li>
+            <li className="my-4 text-sm">IOS app</li>
+            <li className="my-4 text-sm">Android app</li>
+          </ul>
+        </div>
+
+        {/* Company Section */}
+        <div className="text-left lg:flex-1">
+          <ul>
+            <lh className="text-black font-bold text-lg">Company</lh>
+            <li className="my-4 text-sm">About FreshLime</li>
+            <li className="my-4 text-sm">For Business</li>
+            <li className="my-4 text-sm">Partners</li>
+            <li className="my-4 text-sm">Careers</li>
+          </ul>
+        </div>
+
+        {/* Resources Section */}
+        <div className="text-left lg:flex-1">
+          <ul>
+            <lh className="text-black font-bold text-lg">Resources</lh>
+            <li className="my-4 text-sm">Working plan</li>
+            <li className="my-4 text-sm">Help center</li>
+            <li className="my-4 text-sm">Privacy & Terms</li>
+            <li className="my-4 text-sm">My other works</li>
+          </ul>
+        </div>
       </div>
     </div>
   );
